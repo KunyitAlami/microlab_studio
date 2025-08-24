@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>MicroLab Virtual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+    </style>
+
+</head>
+<body class="bg-gray-100 font-[Poppins] ">
+
+    {{-- bagian 1 --}}
+    {{-- loading screen --}}
+    <div id="loadingScreen" class="flex flex-col items-center justify-center min-h-screen text-center">
+        {{-- logo dan judul microlab --}}
+        <div class="flex justify-center items-center">
+        <img src="icon.png" class="mr-6 h-20 w-20">
+        <h1 class="text-7xl font-extrabold text-[#87CBB9]">MicroLab Virtual</h1>
+        </div>
+
+        {{-- loading bar and text --}}
+        <div class="w-2/3 bg-gray-300 rounded-full h-4 overflow-hidden mt-6">
+            <div id="loadingBar" class="bg-[#87CBB9] h-4 w-0 transition-all duration-200"></div>
+        </div>
+    </div>
+
+    {{-- bagian 2 --}}
+    <!-- Konten Web -->
+    <div id="content" class="hidden opacity-0 flex transition-opacity duration-1000">
+        {{-- ambil sidebar --}}
+        @include('partials/sidebar')
+
+        {{-- bagian isi --}}
+        <div class="flex-1 p-6 ml-64">
+            {{-- bagian inti--}}
+            <div class="flex flex-col p-4">
+            {{-- bagian searching --}}
+            <div class="mb-4 flex">
+                <input type="text" class="shadow w-full mr-4 p-2 pl-4 rounded-lg bg-white text-black" placeholder="Cari Bakteri...">
+                <a class="bg-[#87CBB9] px-3 py-2 rounded-lg ml-2"><span class="text-white">Submit</span></a>
+            </div>
+
+            {{-- bagian menu bakteri --}}
+            <div class="w-full min-h-64 bg-white rounded-lg shadow p-4">
+                {{-- bagian judul dan bagian card bakteri --}}
+                <div class="mt-2 ml-4 flex flex-col">
+                    {{-- judul --}}
+                    <div>
+                        <h1 class="font-extrabold text-lg">Bakteri</h1>
+                    </div>
+                    {{-- bagian bakteri --}}
+                    {{-- bagian pertama --}}
+                    <div class="mt-10 flex justify-evenly">
+                        {{-- bakteri pertama --}}
+                        <div class="relative group w-74 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                            <a>
+                                <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/1.jpeg" alt="" />
+                            </a>
+                            <div class="m-2 text-justify">
+                                <p class="text-md font-bold text-black">Bakteri Pertama</p>
+                                <p class="text-sm mt-1 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                            </div>
+
+                            <!-- Overlay button -->
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                    Go to Lab Virtual
+                                </button>
+                            </div>
+                        </div>
+
+                        {{-- bakteri kedua --}}
+                        <div class="relative group w-74 bg-white border border-gray-200 rounded-lg ml-7 mr-7 shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                            <a>
+                                <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/2.jpeg" alt="" />
+                            </a>
+                            <div class="m-2 text-justify">
+                                <p class="text-md font-bold text-black">Bakteri Kedua</p>
+                                <p class="text-sm mt-1 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                            </div>
+
+                            <!-- Overlay button -->
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                    Go to Lab Virtual
+                                </button>
+                            </div>
+                        </div>
+
+                        {{-- bakteri ketiga --}}
+                        <div class="relative group w-74 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                            <a>
+                                <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/3.jpeg" alt="" />
+                            </a>
+                            <div class="m-2 text-justify">
+                                <p class="text-md font-bold text-black">Bakteri Ketiga</p>
+                                <p class="text-sm mt-1 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                            </div>
+
+                            <!-- Overlay button -->
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                    Go to Lab Virtual
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- bagian kedua --}}
+                    <div class="mt-10 flex justify-evenly">
+                        {{-- bakteri keeempat --}}
+                        <div class="relative group w-74 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                            <a>
+                                <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/4.jpeg" alt="" />
+                            </a>
+                            <div class="m-2 text-justify">
+                                <p class="text-md font-bold text-black">Bakteri Keempat</p>
+                                <p class="text-sm mt-1 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                            </div>
+
+                            <!-- Overlay button -->
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                    Go to Lab Virtual
+                                </button>
+                            </div>
+                        </div>
+
+                        {{-- bakteri kelima --}}
+                        <div class="relative group w-74 bg-white border border-gray-200 rounded-lg ml-7 mr-7 shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                            <a>
+                                <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/5.jpeg" alt="" />
+                            </a>
+                            <div class="m-2 text-justify">
+                                <p class="text-md font-bold text-black">Bakteri Kelima</p>
+                                <p class="text-sm mt-1 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                            </div>
+
+                            <!-- Overlay button -->
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                    Go to Lab Virtual
+                                </button>
+                            </div>
+                        </div>
+
+                        {{-- bakteri keenam --}}
+                        <div class="relative group w-74 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                            <a>
+                                <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/6.jpeg" alt="" />
+                            </a>
+                            <div class="m-2 text-justify">
+                                <p class="text-md font-bold text-black">Bakteri Keenam</p>
+                                <p class="text-sm mt-1 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                            </div>
+
+                            <!-- Overlay button -->
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                    Go to Lab Virtual
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        const bar = document.getElementById("loadingBar");
+        const loadingScreen = document.getElementById("loadingScreen");
+        const content = document.getElementById("content");
+
+        let progress = 0;
+        let interval = setInterval(() => {
+            if (progress >= 100) {
+            clearInterval(interval);
+
+            loadingScreen.classList.add("opacity-0");
+            setTimeout(() => {
+                loadingScreen.classList.add("hidden");
+
+                content.classList.remove("hidden");
+                setTimeout(() => {
+                content.classList.add("opacity-100");
+                }, 50);
+            }, 700); 
+            return;
+            }
+            progress += 100;
+            bar.style.width = progress + "%";
+        }, 400);
+    </script>
+</body>
+</html>

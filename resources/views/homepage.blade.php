@@ -42,8 +42,8 @@
             <div class="flex flex-col p-4">
             {{-- bagian searching --}}
             <div class="mb-4 flex">
-                <input type="text" class="shadow w-full mr-4 p-2 pl-4 rounded-lg bg-white text-black" placeholder="Cari Bakteri...">
-                <a class="bg-[#87CBB9] px-3 py-2 rounded-lg ml-2"><span class="text-white">Submit</span></a>
+                <input type="text" class="shadow w-full mr-4 p-2 pl-4 rounded-lg bg-white text-black" placeholder="Search Bacteria...">
+                <a href="#" class="bg-[#87CBB9] px-3 py-2 rounded-lg ml-2"><span class="text-white font-semibold">Submit</span></a>
             </div>
 
             {{-- bagian menu bakteri --}}
@@ -52,7 +52,7 @@
                 <div class="mt-2 ml-4 flex flex-col">
                     {{-- judul --}}
                     <div>
-                        <h1 class="font-extrabold text-lg">Bakteri</h1>
+                        <h1 class="font-extrabold text-lg">Bacteria</h1>
                     </div>
                     {{-- bagian bakteri --}}
                     {{-- bagian pertama --}}
@@ -63,17 +63,17 @@
                                 <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/1.jpeg" alt="" />
                             </a>
                             <div class="m-2 text-justify">
-                                <p class="text-md font-bold text-white">Bakteri Pertama</p>
-                                <p class="text-sm mt-1 mb-3 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                <p class="text-md font-bold text-black">Bakteri Pertama</p>
+                                <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
                             </div>
 
                             <!-- Overlay button -->
                             <a href="{{ route('bakteri.show', ['id' => 1]) }}">
-                            <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-800 transition">
-                                    Go to Lab Virtual
-                                </button>
-                            </div>
+                                <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                        Go to Lab Virtual
+                                    </button>
+                                </div>
                             </a>
                         </div>
 
@@ -83,16 +83,18 @@
                                 <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/2.jpeg" alt="" />
                             </a>
                             <div class="m-2 text-justify">
-                                <p class="text-md font-bold text-white">Bakteri Kedua</p>
-                                <p class="text-sm mt-1 mb-3 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                <p class="text-md font-bold text-black">Bakteri Kedua</p>
+                                <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
                             </div>
 
                             <!-- Overlay button -->
-                            <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-800 transition">
-                                    Go to Lab Virtual
-                                </button>
-                            </div>
+                            <a href="{{ route('bakteri.show', ['id' => 2]) }}">
+                                <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <button class=" font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                        Go to Lab Virtual
+                                    </button>
+                                </div>
+                            </a>
                         </div>
 
                         {{-- bakteri ketiga --}}
@@ -101,16 +103,18 @@
                                 <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/3.jpeg" alt="" />
                             </a>
                             <div class="m-2 text-justify">
-                                <p class="text-md font-bold text-white">Bakteri Ketiga</p>
-                                <p class="text-sm mt-1 mb-3 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                <p class="text-md font-bold text-black">Bakteri Ketiga</p>
+                                <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
                             </div>
 
                             <!-- Overlay button -->
-                            <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-800 transition">
-                                    Go to Lab Virtual
-                                </button>
-                            </div>
+                            <a href="{{ route('bakteri.show', ['id' => 3]) }}">
+                                <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                        Go to Lab Virtual
+                                    </button>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
@@ -122,16 +126,18 @@
                                 <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/4.jpeg" alt="" />
                             </a>
                             <div class="m-2 text-justify">
-                                <p class="text-md font-bold text-white">Bakteri Keempat</p>
-                                <p class="text-sm mt-1 mb-3 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                <p class="text-md font-bold text-black">Bakteri Keempat</p>
+                                <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
                             </div>
 
                             <!-- Overlay button -->
-                            <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-800 transition">
-                                    Go to Lab Virtual
-                                </button>
-                            </div>
+                            <a href="{{ route('bakteri.show', ['id' => 4]) }}">
+                                <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                        Go to Lab Virtual
+                                    </button>
+                                </div>
+                            </a>
                         </div>
 
                         {{-- bakteri kelima --}}
@@ -140,16 +146,18 @@
                                 <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/5.jpeg" alt="" />
                             </a>
                             <div class="m-2 text-justify">
-                                <p class="text-md font-bold text-white">Bakteri Kelima</p>
-                                <p class="text-sm mt-1 mb-3 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                <p class="text-md font-bold text-black">Bakteri Kelima</p>
+                                <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
                             </div>
 
                             <!-- Overlay button -->
-                            <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-800 transition">
-                                    Go to Lab Virtual
-                                </button>
-                            </div>
+                            <a href="{{ route('bakteri.show', ['id' => 5]) }}">
+                                <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                        Go to Lab Virtual
+                                    </button>
+                                </div>
+                            </a>
                         </div>
 
                         {{-- bakteri keenam --}}
@@ -158,16 +166,18 @@
                                 <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/6.jpeg" alt="" />
                             </a>
                             <div class="m-2 text-justify">
-                                <p class="text-md font-bold text-white">Bakteri Keenam</p>
-                                <p class="text-sm mt-1 mb-3 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                <p class="text-md font-bold text-black">Bakteri Keenam</p>
+                                <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
                             </div>
 
                             <!-- Overlay button -->
-                            <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-800 transition">
-                                    Go to Lab Virtual
-                                </button>
-                            </div>
+                            <a href="{{ route('bakteri.show', ['id' => 6]) }}">
+                                <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                        Go to Lab Virtual
+                                    </button>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -202,7 +212,7 @@
             }, 700); 
             return;
             }
-            progress += 100;
+            progress += 50;
             bar.style.width = progress + "%";
         }, 400);
     </script>

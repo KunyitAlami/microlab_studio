@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/bakteri/{id}', [BakteriController::class, 'show'])->name('bakteri.show');
+Route::get('/bakteri/{id}/studio', [BakteriController::class, 'studio'])->name('bakteri.studio');

@@ -1,15 +1,19 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BakteriController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('homepage');
 });
-Route::get('/article', function () {
-    return view('article');
-})->name('article.index');
 
+// Artikel (daftar)
+Route::get('/article', [ArticleController::class, 'index'])->name('articles.index');
 
+// Artikel detail
+Route::get('/article/{id}', [ArticleController::class, 'show'])->name('articles.show');
+
+// Bakteri (punya controller sendiri, tetap biarin)
 Route::get('/bakteri/{id}', [BakteriController::class, 'show'])->name('bakteri.show');
 Route::get('/bakteri/{id}/studio', [BakteriController::class, 'studio'])->name('bakteri.studio');

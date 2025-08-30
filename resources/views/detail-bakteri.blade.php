@@ -25,8 +25,8 @@
     {{-- ambil navbar --}}
     @include('partials/navbar')
     {{-- Konten Utama --}}
-    <main class="">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 ml-12 mr-12">
+    <main class="pt-24 px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 ml-6 mr-6">
             {{-- Kolom Kiri: Gambar dan Penjelasan Bakteri --}}
             <div class="lg:col-span-1 space-y-6">
                 <div class="bg-white p-4 rounded-lg shadow-lg">

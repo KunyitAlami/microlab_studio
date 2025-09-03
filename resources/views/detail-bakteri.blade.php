@@ -52,7 +52,7 @@
                         <div class="accordion-content" x-show="open === 'goresan'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:leave="transition ease-in duration-200">
                             <div class="p-4 border-t text-gray-600 space-y-3 text-justify">
                                 <p>Media padat goresan (streak plate) adalah salah satu teknik dasar dalam mikrobiologi untuk memperoleh koloni tunggal dari campuran mikroorganisme. Prinsip utama dari metode ini adalah pengenceran mekanis sampel dengan cara menggoreskan inokulum secara berulang-ulang di permukaan agar padat dalam cawan Petri.</p>
-                                <a href="{{ route('bakteri.studio', ['id' => 1]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
+                                <a    target="_blank" href="{{ route('bakteri.studio', ['id' => 1]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
                                     Masuk ke Lab
                                 </a>
                             </div>
@@ -69,7 +69,7 @@
                         <div class="accordion-content" x-show="open === 'miring'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:leave="transition ease-in duration-200">
                             <div class="p-4 border-t text-gray-600 space-y-3 text-justify">
                                 <p>Teknik ini digunakan untuk menumbuhkan dan menyimpan kultur murni bakteri dalam jangka waktu yang lebih lama. Inokulum digoreskan pada permukaan media agar yang miring di dalam tabung reaksi. Metode ini ideal untuk pemeliharaan kultur stok dan identifikasi bakteri karena memungkinkan pertumbuhan yang terkontrol dengan area permukaan yang cukup.</p>
-                                <a href="{{ route('bakteri.studio', ['id' => 2]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
+                                <a    target="_blank"href="{{ route('bakteri.studio', ['id' => 2]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
                                     Masuk ke Lab
                                 </a>
                             </div>
@@ -86,7 +86,7 @@
                         <div class="accordion-content" x-show="open === 'tegak'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:leave="transition ease-in duration-200">
                             <div class="p-4 border-t text-gray-600 space-y-3 text-justify">
                                 <p>Teknik inokulasi dengan cara menusukkan jarum inokulasi lurus ke dalam media agar padat di tabung reaksi. Metode ini digunakan untuk menguji motilitas bakteri, produksi gas, dan mengidentifikasi bakteri anaerob. Pertumbuhan akan terlihat sepanjang jalur tusukan, memberikan informasi tentang karakteristik metabolik bakteri.</p>
-                                <a href="{{ route('bakteri.studio', ['id' => 3]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
+                                <a   target="_blank" href="{{ route('bakteri.studio', ['id' => 3]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
                                     Masuk ke Lab
                                 </a>
                             </div>
@@ -103,7 +103,7 @@
                         <div class="accordion-content" x-show="open === 'cair'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:leave="transition ease-in duration-200">
                             <div class="p-4 border-t text-gray-600 space-y-3 text-justify">
                                 <p>Teknik menumbuhkan bakteri dalam media cair (broth) yang memungkinkan pertumbuhan bakteri secara merata dalam seluruh volume media. Metode ini digunakan untuk memperbanyak biomassa bakteri, uji biokimia, dan mempersiapkan kultur untuk berbagai keperluan penelitian. Media cair memberikan nutrisi yang homogen dan oksigenasi yang baik.</p>
-                                <a href="{{ route('bakteri.studio', ['id' => 4]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
+                                <a   target="_blank" href="{{ route('bakteri.studio', ['id' => 4]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
                                     Masuk ke Lab
                                 </a>
                             </div>
@@ -120,7 +120,7 @@
                         <div class="accordion-content" x-show="open === 'spread'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:leave="transition ease-in duration-200">
                             <div class="p-4 border-t text-gray-600 space-y-3 text-justify">
                                 <p>Teknik ini menggunakan batang gelas steril berbentuk L untuk menyebarkan inokulum cair secara merata di seluruh permukaan agar dalam cawan Petri. Metode spread plate sangat efektif untuk menghitung jumlah bakteri (colony counting) dan memperoleh koloni yang tersebar merata dengan ukuran yang seragam untuk analisis kuantitatif.</p>
-                                <a href="{{ route('bakteri.studio', ['id' => 5]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
+                                <a   target="_blank" href="{{ route('bakteri.studio', ['id' => 5]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
                                     Masuk ke Lab
                                 </a>
                             </div>
@@ -137,7 +137,7 @@
                         <div class="accordion-content" x-show="open === 'pour'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:leave="transition ease-in duration-200">
                             <div class="p-4 border-t text-gray-600 space-y-3 text-justify">
                                 <p>Metode pour plate melibatkan pencampuran sampel bakteri dengan media agar cair yang masih hangat (±45°C) kemudian dituang ke dalam cawan Petri dan dibiarkan memadat. Teknik ini menghasilkan koloni yang tumbuh baik di permukaan maupun di dalam agar, sangat berguna untuk menghitung total bakteri termasuk yang bersifat mikroaerofil.</p>
-                                <a href="{{ route('bakteri.studio', ['id' => 6]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
+                                <a   target="_blank" href="{{ route('bakteri.studio', ['id' => 6]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
                                     Masuk ke Lab
                                 </a>
                             </div>

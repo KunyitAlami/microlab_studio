@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <title>MicroLab Virtual</title>
@@ -7,12 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="/icon.png" type="image/png">
     <style>
-    body {
-        font-family: 'Poppins', sans-serif;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
     </style>
 
 </head>
+
 <body class="bg-gray-100 font-[Poppins] ">
 
     {{-- bagian 1 --}}
@@ -20,8 +22,8 @@
     <div id="loadingScreen" class="flex flex-col items-center justify-center min-h-screen text-center">
         {{-- logo dan judul microlab --}}
         <div class="flex justify-center items-center">
-        <img src="icon.png" class="mr-6 h-20 w-20">
-        <h1 class="text-7xl font-extrabold text-[#87CBB9]">MicroLab Virtual</h1>
+            <img src="icon.png" class="mr-6 h-20 w-20">
+            <h1 class="text-7xl font-extrabold text-[#87CBB9]">MicroLab Virtual</h1>
         </div>
 
         {{-- loading bar and text --}}
@@ -40,148 +42,148 @@
         <div class="flex-1 p-6 ml-64">
             {{-- bagian inti--}}
             <div class="flex flex-col p-4">
-            {{-- bagian searching --}}
-            <div class="mb-4 flex">
-                <input type="text" class="shadow w-full mr-4 p-2 pl-4 rounded-lg bg-white text-black" placeholder="Search Bacteria...">
-                <a href="#" class="bg-[#87CBB9] px-3 py-2 rounded-lg ml-2"><span class="text-white font-semibold">Submit</span></a>
-            </div>
+                {{-- bagian searching --}}
+                <div class="mb-4 flex">
+                    <input type="text" class="shadow w-full mr-4 p-2 pl-4 rounded-lg bg-white text-black" placeholder="Search Bacteria...">
+                    <a href="#" class="bg-[#87CBB9] px-3 py-2 rounded-lg ml-2"><span class="text-white font-semibold">Submit</span></a>
+                </div>
 
-            {{-- bagian menu bakteri --}}
-            <div class="w-full min-h-64 bg-white rounded-lg shadow p-4">
-                {{-- bagian judul dan bagian card bakteri --}}
-                <div class="mt-2 ml-4 flex flex-col">
-                    {{-- judul --}}
-                    <div>
-                        <h1 class="font-extrabold text-lg">Bacteria</h1>
-                    </div>
-                    {{-- bagian bakteri --}}
-                    {{-- bagian pertama --}}
-                    <div class="mt-10 flex justify-evenly">
-                        {{-- bakteri pertama --}}
-                        <div class="relative group w-74 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
-                            <a>
-                                <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/1.jpeg" alt="" />
-                            </a>
-                            <div class="m-2 text-justify">
-                                <p class="text-md font-bold text-black">Bakteri Pertama</p>
-                                <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                {{-- bagian menu bakteri --}}
+                <div class="w-full min-h-64 bg-white rounded-lg shadow p-4">
+                    {{-- bagian judul dan bagian card bakteri --}}
+                    <div class="mt-2 ml-4 flex flex-col">
+                        {{-- judul --}}
+                        <div>
+                            <h1 class="font-extrabold text-lg">Bacteria</h1>
+                        </div>
+                        {{-- bagian bakteri --}}
+                        {{-- bagian pertama --}}
+                        <div class="mt-10 flex justify-evenly">
+                            {{-- bakteri pertama --}}
+                            <div class="relative group w-74 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                                <a>
+                                    <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/1.jpeg" alt="" />
+                                </a>
+                                <div class="m-2 text-justify">
+                                    <p class="text-md font-bold text-black">Bakteri Pertama</p>
+                                    <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                </div>
+
+                                <!-- Overlay button -->
+                                <a href="{{ route('bakteri.show', ['id' => 1]) }}">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                            Go to Lab Virtual
+                                        </button>
+                                    </div>
+                                </a>
                             </div>
 
-                            <!-- Overlay button -->
-                            <a href="{{ route('bakteri.show', ['id' => 1]) }}">
-                                <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
-                                        Go to Lab Virtual
-                                    </button>
+                            {{-- bakteri kedua --}}
+                            <div class="relative group w-74 bg-white border border-gray-200 rounded-lg ml-7 mr-7 shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                                <a>
+                                    <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/2.jpeg" alt="" />
+                                </a>
+                                <div class="m-2 text-justify">
+                                    <p class="text-md font-bold text-black">Bakteri Kedua</p>
+                                    <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
                                 </div>
-                            </a>
+
+                                <!-- Overlay button -->
+                                <a href="{{ route('bakteri.show', ['id' => 2]) }}">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <button class=" font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                            Go to Lab Virtual
+                                        </button>
+                                    </div>
+                                </a>
+                            </div>
+
+                            {{-- bakteri ketiga --}}
+                            <div class="relative group w-74 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                                <a>
+                                    <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/3.jpeg" alt="" />
+                                </a>
+                                <div class="m-2 text-justify">
+                                    <p class="text-md font-bold text-black">Bakteri Ketiga</p>
+                                    <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                </div>
+
+                                <!-- Overlay button -->
+                                <a href="{{ route('bakteri.show', ['id' => 3]) }}">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                            Go to Lab Virtual
+                                        </button>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
 
-                        {{-- bakteri kedua --}}
-                        <div class="relative group w-74 bg-white border border-gray-200 rounded-lg ml-7 mr-7 shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
-                            <a>
-                                <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/2.jpeg" alt="" />
-                            </a>
-                            <div class="m-2 text-justify">
-                                <p class="text-md font-bold text-black">Bakteri Kedua</p>
-                                <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                        {{-- bagian kedua --}}
+                        <div class="mt-10 flex justify-evenly">
+                            {{-- bakteri keeempat --}}
+                            <div class="relative group w-74 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                                <a>
+                                    <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/4.jpeg" alt="" />
+                                </a>
+                                <div class="m-2 text-justify">
+                                    <p class="text-md font-bold text-black">Bakteri Keempat</p>
+                                    <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                </div>
+
+                                <!-- Overlay button -->
+                                <a href="{{ route('bakteri.show', ['id' => 4]) }}">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                            Go to Lab Virtual
+                                        </button>
+                                    </div>
+                                </a>
                             </div>
 
-                            <!-- Overlay button -->
-                            <a href="{{ route('bakteri.show', ['id' => 2]) }}">
-                                <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <button class=" font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
-                                        Go to Lab Virtual
-                                    </button>
+                            {{-- bakteri kelima --}}
+                            <div class="relative group w-74 bg-white border border-gray-200 rounded-lg ml-7 mr-7 shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                                <a>
+                                    <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/5.jpeg" alt="" />
+                                </a>
+                                <div class="m-2 text-justify">
+                                    <p class="text-md font-bold text-black">Bakteri Kelima</p>
+                                    <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
                                 </div>
-                            </a>
-                        </div>
 
-                        {{-- bakteri ketiga --}}
-                        <div class="relative group w-74 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
-                            <a>
-                                <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/3.jpeg" alt="" />
-                            </a>
-                            <div class="m-2 text-justify">
-                                <p class="text-md font-bold text-black">Bakteri Ketiga</p>
-                                <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                <!-- Overlay button -->
+                                <a href="{{ route('bakteri.show', ['id' => 5]) }}">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                            Go to Lab Virtual
+                                        </button>
+                                    </div>
+                                </a>
                             </div>
 
-                            <!-- Overlay button -->
-                            <a href="{{ route('bakteri.show', ['id' => 3]) }}">
-                                <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
-                                        Go to Lab Virtual
-                                    </button>
+                            {{-- bakteri keenam --}}
+                            <div class="relative group w-74 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
+                                <a>
+                                    <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/6.jpeg" alt="" />
+                                </a>
+                                <div class="m-2 text-justify">
+                                    <p class="text-md font-bold text-black">Bakteri Keenam</p>
+                                    <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
 
-                    {{-- bagian kedua --}}
-                    <div class="mt-10 flex justify-evenly">
-                        {{-- bakteri keeempat --}}
-                        <div class="relative group w-74 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
-                            <a>
-                                <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/4.jpeg" alt="" />
-                            </a>
-                            <div class="m-2 text-justify">
-                                <p class="text-md font-bold text-black">Bakteri Keempat</p>
-                                <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                <!-- Overlay button -->
+                                <a href="{{ route('bakteri.show', ['id' => 6]) }}">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
+                                            Go to Lab Virtual
+                                        </button>
+                                    </div>
+                                </a>
                             </div>
-
-                            <!-- Overlay button -->
-                            <a href="{{ route('bakteri.show', ['id' => 4]) }}">
-                                <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
-                                        Go to Lab Virtual
-                                    </button>
-                                </div>
-                            </a>
-                        </div>
-
-                        {{-- bakteri kelima --}}
-                        <div class="relative group w-74 bg-white border border-gray-200 rounded-lg ml-7 mr-7 shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
-                            <a>
-                                <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/5.jpeg" alt="" />
-                            </a>
-                            <div class="m-2 text-justify">
-                                <p class="text-md font-bold text-black">Bakteri Kelima</p>
-                                <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
-                            </div>
-
-                            <!-- Overlay button -->
-                            <a href="{{ route('bakteri.show', ['id' => 5]) }}">
-                                <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
-                                        Go to Lab Virtual
-                                    </button>
-                                </div>
-                            </a>
-                        </div>
-
-                        {{-- bakteri keenam --}}
-                        <div class="relative group w-74 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:shadow-xl">
-                            <a>
-                                <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/6.jpeg" alt="" />
-                            </a>
-                            <div class="m-2 text-justify">
-                                <p class="text-md font-bold text-black">Bakteri Keenam</p>
-                                <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
-                            </div>
-
-                            <!-- Overlay button -->
-                            <a href="{{ route('bakteri.show', ['id' => 6]) }}">
-                                <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <button class="font-semibold px-4 py-2 bg-[#87CBB9] text-white rounded-lg shadow-md hover:bg-blue-800 transition">
-                                        Go to Lab Virtual
-                                    </button>
-                                </div>
-                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
 
         </div>
@@ -199,22 +201,23 @@
         let progress = 0;
         let interval = setInterval(() => {
             if (progress >= 100) {
-            clearInterval(interval);
+                clearInterval(interval);
 
-            loadingScreen.classList.add("opacity-0");
-            setTimeout(() => {
-                loadingScreen.classList.add("hidden");
-
-                content.classList.remove("hidden");
+                loadingScreen.classList.add("opacity-0");
                 setTimeout(() => {
-                content.classList.add("opacity-100");
-                }, 50);
-            }, 700); 
-            return;
+                    loadingScreen.classList.add("hidden");
+
+                    content.classList.remove("hidden");
+                    setTimeout(() => {
+                        content.classList.add("opacity-100");
+                    }, 50);
+                }, 700);
+                return;
             }
             progress += 50;
             bar.style.width = progress + "%";
         }, 400);
     </script>
 </body>
+
 </html>

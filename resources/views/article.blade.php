@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <title>Article - MicroLab Virtual</title>
@@ -12,6 +13,7 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-100 font-[Poppins]">
 
     {{-- Loading Screen --}}
@@ -44,41 +46,28 @@
 
                 {{-- Artikel Section --}}
                 <div class="w-full min-h-64 bg-white rounded-lg shadow p-6">
-                    <h1 class="font-extrabold text-lg mb-6">Artikel</h1>
+                    <h1 class="font-extrabold text-lg mb-6">Artikel Terbaru</h1>
 
-                    {{-- Grid Artikel --}}
+                    {{-- Grid Artikel Dinamis --}}
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {{-- Card Artikel 1 --}}
-                        <div class="bg-gray-50 border border-gray-200 rounded-lg shadow hover:shadow-lg transition-all duration-300">
-                            <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/1.jpeg" alt="" />
-                            <div class="p-4">
-                                <h2 class="text-md font-bold text-black">Judul Artikel 1</h2>
-                                <p class="text-sm text-gray-600 mt-2 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="{{ url('/article/1') }}" class="text-[#87CBB9] font-semibold hover:underline">Baca selengkapnya →</a>
-                            </div>
-                        </div>
 
-                        {{-- Card Artikel 2 --}}
-                        <div class="bg-gray-50 border border-gray-200 rounded-lg shadow hover:shadow-lg transition-all duration-300">
-                            <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/2.jpeg" alt="" />
-                            <div class="p-4">
-                                <h2 class="text-md font-bold text-black">Judul Artikel 2</h2>
-                                <p class="text-sm text-gray-600 mt-2 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="{{ url('/article/2') }}" class="text-[#87CBB9] font-semibold hover:underline">Baca selengkapnya →</a>
+                        {{-- Loop untuk setiap artikel --}}
+                        @foreach ($articles as $article)
+                        <div class="bg-gray-50 border border-gray-200 rounded-lg shadow hover:shadow-lg transition-all duration-300 flex flex-col">
+                            <a href="{{ route('articles.show', ['id' => $article['id']]) }}">
+                                <img class="rounded-t-lg w-full h-40 object-cover" src="{{ asset($article['image']) }}" alt="{{ $article['title'] }}" />
+                            </a>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h2 class="text-md font-bold text-black">{{ $article['title'] }}</h2>
+                                <p class="text-sm text-gray-600 mt-2 mb-4 flex-grow">{{ $article['excerpt'] }}</p>
+                                <a href="{{ route('articles.show', ['id' => $article['id']]) }}" class="text-[#87CBB9] font-semibold hover:underline self-start">
+                                    Baca selengkapnya →
+                                </a>
                             </div>
                         </div>
+                        @endforeach
 
-                        {{-- Card Artikel 3 --}}
-                        <div class="bg-gray-50 border border-gray-200 rounded-lg shadow hover:shadow-lg transition-all duration-300">
-                            <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/3.jpeg" alt="" />
-                            <div class="p-4">
-                                <h2 class="text-md font-bold text-black">Judul Artikel 3</h2>
-                                <p class="text-sm text-gray-600 mt-2 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="{{ url('/article/3') }}" class="text-[#87CBB9] font-semibold hover:underline">Baca selengkapnya →</a>
-                            </div>
-                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -110,4 +99,5 @@
         }, 400);
     </script>
 </body>
+
 </html>

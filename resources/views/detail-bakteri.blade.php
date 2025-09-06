@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <title>Detail Bakteri - MicroLab Virtual</title>
@@ -12,15 +13,18 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+
         /* Style untuk transisi akordion yang mulus */
         [x-cloak] {
             display: none !important;
         }
+
         .accordion-content {
             overflow: hidden;
         }
     </style>
 </head>
+
 <body class="bg-gray-100 font-[Poppins]">
     {{-- ambil navbar --}}
     @include('partials/navbar')
@@ -53,17 +57,10 @@
                         <div class="accordion-content" x-show="open === 'goresan'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:leave="transition ease-in duration-200">
                             <div class="p-4 border-t text-gray-600 space-y-3 text-justify">
                                 <p>Media padat goresan (streak plate) adalah salah satu teknik dasar dalam mikrobiologi untuk memperoleh koloni tunggal dari campuran mikroorganisme. Prinsip utama dari metode ini adalah pengenceran mekanis sampel dengan cara menggoreskan inokulum secara berulang-ulang di permukaan agar padat dalam cawan Petri.</p>
-                                <div class="flex gap-12">
-                                <a href="{{ route('bakteri.studio', ['id' => 1]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
-                                    Masuk ke Lab
-                                </a>
-                                <a href="{{ route('bakteri.studio', ['id' => 1]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
-                                    Pre-Test
-                                </a>
-                                <a href="{{ route('bakteri.studio', ['id' => 1]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
-                                    Post-Test
-                                </a>
-                                </div>
+                                    <div class="flex gap-12">
+                                        <a href="{{ route('bakteri.quiz', ['id' => 1, 'type' => 'pre-test']) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition"> Masuk ke Lab
+                                        </a>
+                                    </div>
 
                             </div>
                         </div>
@@ -158,10 +155,26 @@
         </div>
     </main>
     </div>
-<script> 
-// Script untuk mengatur tinggi maksimal akordion secara dinamis 
-document.addEventListener('alpine:init', () => { Alpine.directive('resize-accordion', (el, { expression }, { evaluate }) => { const onOpen = () => { if (evaluate(expression)) { el.style.maxHeight = el.scrollHeight + 'px'; } else { el.style.maxHeight = '0'; } }; onOpen(); new ResizeObserver(onOpen).observe(el); }); }); 
-
-</script>
+    <script>
+        // Script untuk mengatur tinggi maksimal akordion secara dinamis 
+        document.addEventListener('alpine:init', () => {
+            Alpine.directive('resize-accordion', (el, {
+                expression
+            }, {
+                evaluate
+            }) => {
+                const onOpen = () => {
+                    if (evaluate(expression)) {
+                        el.style.maxHeight = el.scrollHeight + 'px';
+                    } else {
+                        el.style.maxHeight = '0';
+                    }
+                };
+                onOpen();
+                new ResizeObserver(onOpen).observe(el);
+            });
+        });
+    </script>
 </body>
+
 </html>

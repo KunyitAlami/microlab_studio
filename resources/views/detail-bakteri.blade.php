@@ -49,12 +49,22 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
+
                         <div class="accordion-content" x-show="open === 'goresan'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:leave="transition ease-in duration-200">
                             <div class="p-4 border-t text-gray-600 space-y-3 text-justify">
                                 <p>Media padat goresan (streak plate) adalah salah satu teknik dasar dalam mikrobiologi untuk memperoleh koloni tunggal dari campuran mikroorganisme. Prinsip utama dari metode ini adalah pengenceran mekanis sampel dengan cara menggoreskan inokulum secara berulang-ulang di permukaan agar padat dalam cawan Petri.</p>
+                                <div class="flex gap-12">
                                 <a href="{{ route('bakteri.studio', ['id' => 1]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
                                     Masuk ke Lab
                                 </a>
+                                <a href="{{ route('bakteri.studio', ['id' => 1]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
+                                    Pre-Test
+                                </a>
+                                <a href="{{ route('bakteri.studio', ['id' => 1]) }}" class="inline-block mt-2 px-6 py-2 bg-[#87CBB9] text-white font-semibold rounded-lg shadow-md hover:bg-[#68a08a] transition">
+                                    Post-Test
+                                </a>
+                                </div>
+
                             </div>
                         </div>
                     </div>

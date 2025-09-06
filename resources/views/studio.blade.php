@@ -8,6 +8,7 @@
     <style> body { font-family: 'Poppins', sans-serif; } </style>
 </head>
 <body class="bg-[#87CBB9] font-[Poppins] flex flex-col">
+
     <canvas id="labCanvas" height="800" width="1920" class=""></canvas>
     {{-- button navigasi --}}
     <div class="flex justify-center gap-6 mt-7">
@@ -19,98 +20,9 @@
         <a href="#" class="px-4 py-2 bg-white text-[#87CBB9] rounded-xl 
             hover:border-2 hover:border-black hover:bg-gray-200 hover:text-black 
             transition-all duration-300 ease-in-out font-bold">
-            Ulangi
-        </a>
-        <a href="#" class="px-4 py-2 bg-white text-[#87CBB9] rounded-xl 
-            hover:border-2 hover:border-black hover:bg-gray-200 hover:text-black 
-            transition-all duration-300 ease-in-out font-bold">
             Menu
         </a>
     </div>
-
-    {{-- @include('partials/navbar') --}}
-    {{-- bagian judul atas --}}
-    {{-- <div class="m-8 font-bold text-black">
-        <h1 class="text-3xl">MikroLab Virtual (Canvas 2D)</h1>
-        <p>Praktikum interaktif teknik inokulasi bakteri dengan <span class="text-black">teknik goresan/gesekan</span>  — ikuti langkah demi langkah sesuai prosedur aseptik.</p>
-    </div> --}}
-
-    {{-- bagian isi --}}
-    {{-- <div class="ml-8 mr-8 mb-24 flex"> --}}
-        {{-- bagian canvas nantinya --}}
-        {{-- <div class="bg-white w-[100%] min-h-screen rounded-md shadow-md flex flex-col">
-            <div class=""> --}}
-                {{-- judul teknik --}}
-                {{-- <h1 class="font-bold m-4 text-3xl">
-                    Teknik Inokulasi Gesekan
-                </h1> --}}
-
-                {{-- canvas --}}
-
-
-
-                {{-- tombol navigasi scene --}}
-                {{-- <div class="flex justify-end m-4">
-                    <button id="nextScene" class="bg-[#87CBB9] hover:bg-[#6da696] text-white font-bold py-2 px-4 rounded-md shadow-md">
-                        Selanjutnya
-                    </button>
-                </div> --}}
-
-                {{-- penjelasan teknik --}}
-                {{-- <div class="m-4 text-justify gap-3">
-                    <h1 class="font-bold text-2xl">
-                        Teknik Inokulasi Gesekan
-                    </h1>
-
-                        <div class=" text-center m-2 text-xl">
-                            <h1>Langkah-langkah serta Penjelasan dari Teknik Inokulasi Goresan/Gesekan </h1>
-                        </div>
-
-                        <details class="border-2 border-black text-left ml-4 mr-4 mb-4 p-2 rounded-lg">
-                            <summary class="cursor-pointer font-medium">Homogenisasi suspensi bakteri</summary>
-                            <p class="mt-2 text-justify">
-                                Suspensi bakteri diputar atau dikocok ringan agar sel bakteri tercampur merata...
-                            </p>
-                        </details>
-
-                        <details class="border-2 border-black text-left ml-4 mr-4 mb-4 p-2 rounded-lg">
-                            <summary class="cursor-pointer font-medium">Sterilisasi ose bulat (loop)</summary>
-                            <p class="text-justify mt-2">
-                                Ose logam dipanaskan di atas api hingga pijar merah agar bebas dari mikroba atau sisa inokulum sebelumnya.                            
-                            </p>
-                        </details>
-                        <details class="border-2 border-black text-left ml-4 mr-4 mb-4 p-2 rounded-lg">
-                            <summary class="cursor-pointer font-medium">Mengambil sampel bakteri</summary>
-                            <h1 class="font-bold">Mengambil sampel bakteri</h1>
-                            <p class="text-justify mt-2">
-                                Ose yang sudah dingin dicelupkan ke dalam suspensi bakteri dengan hati-hati untuk mengambil sedikit inokulum.
-                            </p>
-                        </details>
-                        <details class="border-2 border-black text-left ml-4 mr-4 mb-4 p-2 rounded-lg">
-                            <summary class="cursor-pointer font-medium">Goresan pada nutrient agar</summary>
-                            <h1 class="font-bold">Goresan pada nutrient agar</h1>
-                            <p class="text-justify mt-2">
-                               Ose digoreskan pada bagian agar dengan pola zig-zag untuk menyebarkan banyak bakteri di media plate.
-                            </p>
-                        </details>
-                        <details class="border-2 border-black text-left ml-4 mr-4 mb-4 p-2 rounded-lg">
-                            <summary class="cursor-pointer font-medium">Sterilisasi ulang ose</summary>
-                            <h1 class="font-bold">Sterilisasi ulang ose</h1>
-                            <p class="text-justify mt-2">
-                               Setelah goresan pertama, ose kembali dipijarkan di api bunsen lalu didinginkan, agar jumlah bakteri yang terbawa di goresan berikutnya semakin sedikit.
-                            </p>
-                        </details>
-                        <details class="border-2 border-black text-left ml-4 mr-4 mb-4 p-2 rounded-lg">
-                            <summary class="cursor-pointer font-medium">Inkubasi dan hasil isolasi</summary>
-                            <h1 class="font-bold">Inkubasi dan hasil isolasi</h1>
-                            <p class="text-justify mt-2">
-                                Cawan petri ditutup, dibalik, lalu diinkubasi pada suhu sesuai jenis bakteri. Setelah beberapa waktu akan muncul koloni tunggal yang terpisah di ujung goresan, hasil dari isolasi murni.
-                            </p>
-                        </details>
-                </div> --}}
-            {{-- </div>
-        </div>
-    </div> --}}
 
 
 </body>
@@ -161,7 +73,24 @@
     imgGores.src = "/assets/alat/gores.png";
 
     const imgHasil = new Image();
-    imgHasil.src = "/assets/alat/hasil.png";
+    imgHasil.src = "/assets/alat/hasil_inokulasi_gesek.png";
+
+    const sfxKocok = new Audio("/sfx/kocok.mp3"); 
+    sfxKocok.volume = 0.6; // atur volume biar ga berisik
+    sfxKocok.loop = false; 
+
+    const sfxApi = new Audio("/sfx/api.wav"); 
+    sfxApi.volume = 0.6; // atur volume biar ga berisik
+    sfxApi.loop = true; 
+
+    const sfx24Detik = new Audio("/sfx/24detik.mp3"); 
+    sfx24Detik.volume = 0.6; // atur volume biar ga berisik
+    sfx24Detik.loop = true; 
+
+    const sfxbgm = new Audio("/sfx/bgm.mp3"); 
+    sfxbgm.volume = 0.3; // atur volume biar ga berisik
+    sfxbgm.loop = true; 
+
 
     let currentScene = 0;
 
@@ -251,6 +180,11 @@
             ctx.font = "bold 32px Poppins";
             const title = "Alat-Alat yang Akan Kita Gunakan Pada Teknik Inokulasi Goresan/Gesekan:";
             ctx.fillText(title, 950, 50);
+            if (sfxbgm.paused) {
+                sfxbgm.currentTime = 0;
+                sfxbgm.play().catch(err => console.warn("⚠️ Autoplay blocked:", err));
+                console.log("🎵 BGM started");
+            }
 
             const alat = [
                 { nama: "Ose Bulat", fungsi: "Untuk mengambil dan menggores bakteri pada media.", gambar: imgOseTampilan },
@@ -329,6 +263,18 @@
             
             setTimeout(() => {
                 const scaleFactor = 0.25; 
+                let lastPlayTime = 0;
+
+                function playKocokSFX() {
+                    const now = Date.now();
+                    if (now - lastPlayTime > 300) {  
+                        // kasih jeda 300ms biar ga overlap
+                        sfxKocok.currentTime = 0; 
+                        sfxKocok.play();
+                        lastPlayTime = now;
+                    }
+                }
+
                 
                 let tabungWidth, tabungHeight; 
                 if (imgTabung && imgTabung.complete && imgTabung.naturalWidth){ 
@@ -423,19 +369,26 @@
                 function onMouseMove(e) {
                     if (!isDragging || !sceneActive) return;
                     e.preventDefault();
+
                     const rect = canvas.getBoundingClientRect();
                     const newTabungX = e.clientX - rect.left - startX;
+
                     totalDistanceMoved += Math.abs(newTabungX - tabungX);
+
                     tabungX = newTabungX;
                     tabungX = Math.min(Math.max(tabungX, 50), canvas.width - tabungWidth - 50);
-                    
+
                     drawScene();
+
                     if (totalDistanceMoved >= threshold && !isCompleted) {
                         isCompleted = true;
                         drawScene();
                         canvas.style.cursor = 'default';
                     }
+
+                    playKocokSFX();
                 }
+
 
                 function onMouseUp(e) {
                     if (!sceneActive) return;
@@ -632,15 +585,27 @@
                     // tombol spiritus
                     if (mouseX >= spiritusBtn.x && mouseX <= spiritusBtn.x + spiritusBtn.width &&
                         mouseY >= spiritusBtn.y && mouseY <= spiritusBtn.y + spiritusBtn.height) {
-                        if (!spiritusOn) oseVisible = true;
-                        spiritusOn = !spiritusOn;
+                        
+                        if (!spiritusOn) {
+                            oseVisible = true;
+                            spiritusOn = true;
+
+                            sfxApi.currentTime = 0; 
+                            sfxApi.play();
+                        } else {
+                            spiritusOn = false;
+
+                            sfxApi.pause();
+                            sfxApi.currentTime = 0;
+                        }
+
                         drawScene();
                     }
 
                     // tombol lanjut
                     if (isSteril) {
-                        const btnX = canvas.width / 2 -100;
-                        const btnY = (canvas.height)-100;
+                        const btnX = canvas.width / 2 - 100;
+                        const btnY = (canvas.height) - 100;
                         const btnW = 200;
                         const btnH = 50;
                         if (mouseX >= btnX && mouseX <= btnX + btnW &&
@@ -653,6 +618,7 @@
                         }
                     }
                 }
+
 
 
                 // Rest of the handlers remain the same...
@@ -710,6 +676,8 @@
                         clearInterval(sterilInterval);
                         sterilInterval = null;
                     }
+                    sfxApi.pause();
+                    sfxApi.currentTime = 0;
                     canvas.removeEventListener("click", clickHandler);
                     canvas.removeEventListener("mousedown", mouseDownHandler);
                     canvas.removeEventListener("mousemove", mouseMoveHandler);
@@ -735,9 +703,9 @@
             }, 1500);
         },
 
- function scene5() {
+function scene5() {
     cleanupAllEventListeners();
-    
+
     let spiritusOn = false; 
     let oseVisible = true;
     let isDragging = false;
@@ -776,8 +744,6 @@
             y: (e.clientY - rect.top) * scaleY
         };
     }
-
-    // ... intro teks tetap sama ...
 
     setTimeout(() => {
         function getInstructions() {
@@ -875,21 +841,38 @@
             
             const { x: mouseX, y: mouseY } = getMousePos(e);
 
-            // tahap 1
+            // tahap 1: toggle spiritus
             if (currentStage === 1) {
                 const spiritusBtn = { x: button.x, y: button.y + 45, width: button.width, height: button.height };
                 if (mouseX >= spiritusBtn.x && mouseX <= spiritusBtn.x + spiritusBtn.width &&
                     mouseY >= spiritusBtn.y && mouseY <= spiritusBtn.y + spiritusBtn.height) {
+                    
                     spiritusOn = !spiritusOn;
-                    if (spiritusOn) currentStage = 2;
+
+                    if (spiritusOn) {
+                        // 🔊 mainkan sound spiritus looping
+                        sfxApi.loop = true;
+                        sfxApi.currentTime = 0;
+                        sfxApi.play();
+                        currentStage = 2;
+                    } else {
+                        // 🔇 matikan jika user klik matikan
+                        sfxApi.pause();
+                        sfxApi.currentTime = 0;
+                    }
                     drawScene();
                 }
             }
 
-            // tahap 2
+            // tahap 2: klik tabung → tambah rotasi + suara kocok
             if (currentStage === 2) {
                 if (mouseX >= tabungArea.x && mouseX <= tabungArea.x + tabungArea.width &&
                     mouseY >= tabungArea.y && mouseY <= tabungArea.y + tabungArea.height) {
+                    
+                    // 🔊 mainkan suara kocok sekali
+                    sfxKocok.currentTime = 0;
+                    sfxKocok.play();
+
                     tabungAngle += 10;
                     if (tabungAngle >= 30) {
                         tabungAngle = 30;
@@ -915,9 +898,14 @@
             if (showNextButton && currentStage === 4) {
                 if (mouseX >= nextButton.x && mouseX <= nextButton.x + nextButton.width &&
                     mouseY >= nextButton.y && mouseY <= nextButton.y + nextButton.height) {
+                    
+                    // 🔇 stop semua sound ketika pindah scene
+                    sfxApi.pause();
+                    sfxApi.currentTime = 0;
+
                     sceneActive = false;
                     cleanupScene5();
-                    currentScene = 5; // FIX: lanjut ke scene 6
+                    currentScene = 5; // lanjut ke scene berikutnya
                     scenes[currentScene]();
                     return;
                 }
@@ -963,6 +951,12 @@
             canvas.removeEventListener("mousemove", mouseMoveHandler);
             canvas.removeEventListener("mouseup", mouseUpHandler);
             canvas.removeEventListener("mouseleave", mouseUpHandler);
+
+            // 🔇 stop sound juga saat cleanup
+            sfxApi.pause();
+            sfxApi.currentTime = 0;
+            sfxKocok.pause();
+            sfxKocok.currentTime = 0;
         }
 
         // simpan handler
@@ -1003,6 +997,12 @@ function scene6() {
         let showButton = false;
         let offsetX = 0;
         let offsetY = 0;
+
+        if (sfxApi) {
+            sfxApi.loop = true;
+            sfxApi.currentTime = 0;
+            sfxApi.play().catch(err => console.log("Audio play blocked:", err));
+        }
         
         // Ose
         let ose = { 
@@ -1081,6 +1081,10 @@ function scene6() {
             if (showButton &&
                 mouseX >= canvas.width/2 - 100 && mouseX <= canvas.width/2 + 100 &&
                 mouseY >= canvas.height - 80 && mouseY <= canvas.height - 40) {
+                if (sfxApi) {
+                    sfxApi.pause();
+                    sfxApi.currentTime = 0;
+                }
                 cleanupDrag();
                 activateDrawing();
             }
@@ -1667,7 +1671,15 @@ function scene7() {
         function startIncubation() {
             isIncubating = true;
             cawaHidden = true; // Sembunyikan cawan
-            
+
+            try {
+                sfx24Detik.currentTime = 0; // mulai dari awal
+                sfx24Detik.play().catch(err => console.warn("⚠️ Audio autoplay blocked:", err));
+                console.log("🎵 sfx24Detik started");
+            } catch (err) {
+                console.error("❌ Error playing sfx24Detik:", err);
+            }
+                    
             console.log("⏰ Starting countdown from", countdown);
             
             // Mulai countdown
@@ -1679,6 +1691,8 @@ function scene7() {
                 if (countdown <= 0) {
                     clearInterval(countdownInterval);
                     console.log("✅ Incubation complete!");
+                    sfx24Detik.pause();
+                    sfx24Detik.currentTime = 0;
                     // Tampilkan tombol lihat hasil
                     showHasilButton = true;
                     drawScene();
@@ -1756,14 +1770,14 @@ function scene7() {
 
             // Gambar di kiri
             const imgX = 50;
-            const imgY = 80;
-            const imgWidth = 400;
-            const imgHeight = 400;
+            const imgY = 180;
+            const imgWidth = 500;
+            const imgHeight = 500;
             ctx.drawImage(imgHasil, imgX, imgY, imgWidth, imgHeight);
 
             // Teks di kanan
             const textX = imgX + imgWidth + 30; // jarak kanan gambar
-            let textY = imgY;
+            let textY = imgY+30;
             const lineHeight = 28;
 
             const texts = [
@@ -1775,7 +1789,7 @@ function scene7() {
             ];
 
             texts.forEach(section => {
-                ctx.font = "bold 20px Poppins";
+                ctx.font = "bold 28px Poppins";
                 ctx.fillText(section.title, textX, textY);
                 textY += lineHeight;
 
@@ -1796,7 +1810,7 @@ function scene7() {
                 });
                 if (line) {
                     ctx.fillText(line, textX, textY);
-                    textY += lineHeight + 10; // jarak antar section
+                    textY += lineHeight + 15; // jarak antar section
                 }
             });
 

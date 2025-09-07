@@ -65,8 +65,10 @@
                                     <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/1.jpeg" alt="" />
                                 </a>
                                 <div class="m-2 text-justify">
-                                    <p class="text-md font-bold text-black">Bakteri Pertama</p>
-                                    <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                    <p class="text-md font-bold text-black">Escherichia coli (E. coli)</p>
+                                    <p class="text-sm mt-1 mb-3 text-black">
+                                        Bakteri yang umum ditemukan di usus manusia. Sebagian besar tidak berbahaya, tetapi ada strain tertentu yang dapat menyebabkan diare.
+                                    </p>
                                 </div>
 
                                 <!-- Overlay button -->
@@ -85,8 +87,10 @@
                                     <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/2.jpeg" alt="" />
                                 </a>
                                 <div class="m-2 text-justify">
-                                    <p class="text-md font-bold text-black">Bakteri Kedua</p>
-                                    <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                    <p class="text-md font-bold text-black">Salmonella sp.</p>
+                                    <p class="text-sm mt-1 mb-3 text-black">
+                                        Bakteri penyebab keracunan makanan yang biasanya berasal dari makanan mentah atau kurang matang, seperti telur dan ayam.
+                                    </p>
                                 </div>
 
                                 <!-- Overlay button -->
@@ -105,8 +109,10 @@
                                     <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/3.jpeg" alt="" />
                                 </a>
                                 <div class="m-2 text-justify">
-                                    <p class="text-md font-bold text-black">Bakteri Ketiga</p>
-                                    <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                    <p class="text-md font-bold text-black">Staphylococcus aureus</p>
+                                    <p class="text-sm mt-1 mb-3 text-black">
+                                        Bakteri yang sering hidup di kulit manusia. Dapat menyebabkan infeksi kulit ringan hingga keracunan makanan.
+                                    </p>
                                 </div>
 
                                 <!-- Overlay button -->
@@ -128,8 +134,10 @@
                                     <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/4.jpeg" alt="" />
                                 </a>
                                 <div class="m-2 text-justify">
-                                    <p class="text-md font-bold text-black">Bakteri Keempat</p>
-                                    <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                    <p class="text-md font-bold text-black">Bacillus subtilis</p>
+                                    <p class="text-sm mt-1 mb-3 text-black">
+                                        Bakteri yang hidup di tanah dan sering digunakan dalam penelitian karena mudah tumbuh dan relatif aman.
+                                    </p>
                                 </div>
 
                                 <!-- Overlay button -->
@@ -148,8 +156,10 @@
                                     <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/5.jpeg" alt="" />
                                 </a>
                                 <div class="m-2 text-justify">
-                                    <p class="text-md font-bold text-black">Bakteri Kelima</p>
-                                    <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                    <p class="text-md font-bold text-black">Clostridium botulinum</p>
+                                    <p class="text-sm mt-1 mb-3 text-black">
+                                        Bakteri yang menghasilkan toksin botulinum, salah satu racun paling mematikan, tetapi juga digunakan dalam produk medis (Botox).
+                                    </p>
                                 </div>
 
                                 <!-- Overlay button -->
@@ -168,8 +178,10 @@
                                     <img class="rounded-t-lg w-full h-40 object-cover transition-all duration-300 group-hover:brightness-75" src="assets/bakteri/6.jpeg" alt="" />
                                 </a>
                                 <div class="m-2 text-justify">
-                                    <p class="text-md font-bold text-black">Bakteri Keenam</p>
-                                    <p class="text-sm mt-1 mb-3 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis delectus corporis cumque?</p>
+                                    <p class="text-md font-bold text-black">Mycobacterium tuberculosis</p>
+                                    <p class="text-sm mt-1 mb-3 text-black">
+                                        Bakteri penyebab penyakit tuberkulosis (TBC) yang menyerang paru-paru dan masih menjadi masalah kesehatan global.
+                                    </p>
                                 </div>
 
                                 <!-- Overlay button -->
@@ -182,6 +194,7 @@
                                 </a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -214,7 +227,7 @@
                 }, 700);
                 return;
             }
-            progress += 50;
+            progress += 8;
             bar.style.width = progress + "%";
         }, 400);
     </script>

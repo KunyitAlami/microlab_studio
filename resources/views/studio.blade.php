@@ -203,8 +203,8 @@
                     gambar: imgSpiritus
                 },
                 {
-                    nama: "Cawan Petri (NA Plate)",
-                    fungsi: "Berisi media nutrient agar tempat tumbuh bakteri.",
+                    nama: "MacConkey Agar (MCA)",
+                    fungsi: "Berisi media diferensial agar tempat tumbuh bakteri.",
                     gambar: imgCawan
                 },
                 {
@@ -1068,7 +1068,7 @@
             ctx.textAlign = "center";
             ctx.fillText("Tahap 4: Inokulasi Goresan", canvas.width / 2, canvas.height / 2 - 20);
             ctx.font = "20px Poppins";
-            ctx.fillText("Menggores pada Nutrient Agar (NA)", canvas.width / 2, canvas.height / 2 + 20);
+            ctx.fillText("Menggores pada MacConkey Agar (MCA)", canvas.width / 2, canvas.height / 2 + 20);
 
             setTimeout(() => {
                 // STATE - menggunakan global sceneActive
@@ -1134,7 +1134,7 @@
                     ctx.textAlign = "start";
                     ctx.fillText("Langkah 4: Menggesekkan Spesimen ke Media Padat", 20, 40);
                     ctx.font = "18px Poppins";
-                    ctx.fillText("Instruksi: Arahkan ose dengan bakteri ke cawan agar (NA)", 20, 70);
+                    ctx.fillText("Instruksi: Arahkan ose dengan bakteri ke MacConkey Agar (MCA)", 20, 70);
 
                     // Draw spiritus burner
                     ctx.drawImage(imgSpiritus, (canvas.width / 2) - 150, (canvas.height / 2) + 102, 300, 300);
@@ -1890,12 +1890,24 @@
 
                 // Teks di kanan
                 const textX = imgX + imgWidth + 30; // jarak kanan gambar
-                let textY = imgY + 30;
+                let textY = imgY-90;
                 const lineHeight = 28;
 
                 const texts = [{
                         title: "Hasil",
                         content: "Melalui inokulasi gesekan pada bakteri E. coli, kita dapat mengetahui lima langkah utama dalam teknik ini, yaitu: persiapan bakteri, pengambilan inokulum, penggoresan pada media, isolasi koloni, dan pengamatan pertumbuhan. Metode gesekan bertujuan untuk menyebarkan bakteri secara bertahap agar koloni tunggal dapat terbentuk, memungkinkan identifikasi morfologi koloni secara jelas."
+                    },
+                    {
+                        title: "MacConkey Agar (MCA)",
+                        content: "E. coli memfermentasi laktosa, sehingga memberikan penampakan khusus."
+                    },
+                    {
+                        title: "Koloni",
+                        content: "Bulat, halus, dan berwarna merah muda cerah (pink) karena produksi asam dari fermentasi laktosa yang mengubah indikator pH (neutral red)."
+                    },
+                    {
+                        title: "Zona sekitar koloni",
+                        content: "Bisa tampak presipitasi empedu berwarna merah muda, memberikan tampilan agak buram di sekitar koloni. Ini membedakan E. coli dari bakteri non-laktosa seperti Salmonella atau Shigella yang koloni bening/tidak berwarna."
                     },
                     {
                         title: "Hasil pada bagian 50% pertama",
@@ -1912,7 +1924,8 @@
                     {
                         title: "Kesimpulan",
                         content: "Dari keseluruhan proses ini, dapat disimpulkan bahwa inokulasi gesekan berhasil menyebarkan bakteri dari area padat ke terisolasi, memungkinkan identifikasi morfologi koloni dan isolasi koloni tunggal untuk penelitian lanjutan."
-                    }
+                    },
+
                 ];
 
                 texts.forEach(section => {

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BakteriController;
+use App\Http\Controllers\FeedbackController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -10,6 +11,10 @@ Route::get('/', function () {
 
 // Artikel (daftar)
 Route::get('/article', [ArticleController::class, 'index'])->name('articles.index');
+
+
+// Feedback (daftar)
+Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback.index');
 
 // Artikel detail
 Route::get('/article/{id}', [ArticleController::class, 'show'])->name('articles.show');

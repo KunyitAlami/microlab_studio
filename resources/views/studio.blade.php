@@ -1898,6 +1898,22 @@
                         content: "Melalui inokulasi gesekan pada bakteri E. coli, kita dapat mengetahui lima langkah utama dalam teknik ini, yaitu: persiapan bakteri, pengambilan inokulum, penggoresan pada media, isolasi koloni, dan pengamatan pertumbuhan. Metode gesekan bertujuan untuk menyebarkan bakteri secara bertahap agar koloni tunggal dapat terbentuk, memungkinkan identifikasi morfologi koloni secara jelas."
                     },
                     {
+                        title: "MacConkey Agar (MCA)",
+                        content: "E. coli memfermentasi laktosa, sehingga memberikan penampakan khusus."
+                    },
+                    {
+                        title: "Koloni",
+                        content: "Bulat, halus, dan berwarna merah muda cerah (pink) karena produksi asam dari fermentasi laktosa yang mengubah indikator pH (neutral red)."
+                    },
+                    {
+                        title: "Zona sekitar koloni",
+                        content: "Bisa tampak presipitasi empedu berwarna merah muda, memberikan tampilan agak buram di sekitar koloni."
+                    },
+                    {
+                        title: "",
+                        content: "Ini membedakan E. coli dari bakteri non-laktosa seperti Salmonella atau Shigella yang koloni bening/tidak berwarna."
+                    },
+                    {
                         title: "Hasil pada bagian 50% pertama",
                         content: "Pada area 50% pertama, koloni tumbuh rapat dan berdekatan karena menerima konsentrasi bakteri paling tinggi, tampak krem hingga putih kekuningan, bulat, dan mengkilap, menunjukkan inokulum berhasil diaplikasikan."
                     },
@@ -1912,7 +1928,8 @@
                     {
                         title: "Kesimpulan",
                         content: "Dari keseluruhan proses ini, dapat disimpulkan bahwa inokulasi gesekan berhasil menyebarkan bakteri dari area padat ke terisolasi, memungkinkan identifikasi morfologi koloni dan isolasi koloni tunggal untuk penelitian lanjutan."
-                    }
+                    },
+
                 ];
 
                 texts.forEach(section => {
